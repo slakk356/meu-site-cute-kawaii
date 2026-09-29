@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanrio • Cantinho Fofo</title>
+<style>
+  :root {
+    --pink:#ffd7e8; --pink2:#ffb7d3; --cream:#fffafc; --ink:#4c4050;
+    --lav:#e9ddff; --blue:#dff3ff; --line:#f0cfe0;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    color:var(--ink); background:linear-gradient(135deg,#fff7fb,#f7f1ff 50%,#eefaff);
+  }
+  header {
+    padding:24px 18px 10px; text-align:center;
+  }
+  header h1 { margin:0; font-size:clamp(1.7rem,5vw,2.7rem); }
+  header p { margin:8px auto 0; max-width:720px; opacity:.8; }
+  .grid {
+    width:min(1150px,94vw); margin:22px auto 42px;
+    display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px;
+  }
+  .card {
+    background:rgba(255,255,255,.9); border:2px solid var(--line); border-radius:24px;
+    padding:20px; box-shadow:0 10px 28px rgba(100,70,100,.08);
+  }
+  .card:last-child { grid-column:1 / -1; }
+  .tag {
+    display:inline-block; padding:6px 10px; border-radius:999px;
+    background:var(--pink); font-weight:700; font-size:.84rem; margin-bottom:10px;
+  }
+  h2 { margin:4px 0 10px; font-size:1.25rem; }
+  .logo {
+    display:flex; align-items:center; justify-content:center; min-height:260px;
+    background:radial-gradient(circle at 50% 40%,#fff 0 25%,#fff0f7 26% 100%);
+    border-radius:20px; overflow:hidden;
+  }
+  .logo svg { width:min(260px,75%); height:auto; }
+  .video-wrap {
+    position:relative; width:100%; aspect-ratio:16/9; overflow:hidden;
+    border-radius:18px; background:#111;
+  }
+  .video-wrap iframe { width:100%; height:100%; border:0; }
+  .small { font-size:.88rem; opacity:.75; margin-top:9px; }
+  ol { padding-left:1.3rem; margin-bottom:0; }
+  li { margin:10px 0; }
+  a {
+    color:#7b4aa3; font-weight:700; text-decoration:none;
+    border-bottom:1px dashed currentColor;
+  }
+  a:hover { text-decoration:underline; }
+  .info {
+    display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px;
+  }
+  .info div { background:var(--cream); border:1px solid var(--line); border-radius:16px; padding:14px; }
+  .info strong { display:block; margin-bottom:5px; }
+  .qr { text-align:center; }
+  .qr img { width:min(250px,80vw); border-radius:12px; background:#fff; padding:12px; }
+  footer { text-align:center; padding:0 18px 30px; font-size:.82rem; opacity:.7; }
+  @media (max-width:720px) {
+    .grid { grid-template-columns:1fr; }
+    .card:last-child { grid-column:auto; }
+    .info { grid-template-columns:1fr; }
+    .card { padding:16px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>🌷 Cantinho Fofo da Sanrio 🌷</h1>
+  <p>Uma página responsiva com logo original, vídeo em loop, links informativos e QR Code.</p>
+</header>
+
+<main class="grid">
+  <section class="card">
+    <span class="tag">1 • Logo</span>
+    <h2>Uma logo fofa original</h2>
+    <div class="logo" aria-label="Logo original fofa">
+      <svg viewBox="0 0 320 260" role="img">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffb7d3"/>
+            <stop offset="1" stop-color="#d9c7ff"/>
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="132" r="78" fill="url(#g)" stroke="#6a526d" stroke-width="5"/>
+        <path d="M103 82 L83 34 Q80 20 96 27 L137 54 Z" fill="#ffb7d3" stroke="#6a526d" stroke-width="5"/>
+        <path d="M217 82 L237 34 Q240 20 224 27 L183 54 Z" fill="#d9c7ff" stroke="#6a526d" stroke-width="5"/>
+        <circle cx="133" cy="126" r="7" fill="#4c4050"/>
+        <circle cx="187" cy="126" r="7" fill="#4c4050"/>
+        <path d="M151 145 Q160 154 169 145" fill="none" stroke="#4c4050" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="112" cy="146" r="9" fill="#ff9fbe" opacity=".8"/>
+        <circle cx="208" cy="146" r="9" fill="#ff9fbe" opacity=".8"/>
+        <path d="M151 72 Q160 62 169 72" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+        <text x="160" y="236" text-anchor="middle" font-size="22" font-weight="800" fill="#6a526d">CUTE FRIENDS</text>
+      </svg>
+    </div>
+    <p class="small">A mascote/logo foi desenhada de forma original, sem copiar um personagem específico da Sanrio.</p>
+  </section>
+
+  <section class="card">
+    <span class="tag">2 • Vídeo</span>
+    <h2>Anúncio em vídeo com reprodução em loop</h2>
+    <div class="video-wrap">
+      <iframe
+        src="https://player.vimeo.com/video/764352642?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0"
+        title="Vídeo da Sanrio: Welcome Kuromi!"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <p class="small">Vídeo incorporado a partir de um vídeo do Vimeo que aparece incorporado no site oficial da Sanrio; o player está configurado para tentar autoplay sem som e repetir.</p>
+  </section>
+
+  <section class="card">
+    <span class="tag">3 • 5 links</span>
+    <h2>Explore a Sanrio</h2>
+    <ol>
+      <li><a href="https://www.sanrio.com/collections/characters" target="_blank" rel="noopener">Personagens e características</a> — página oficial de personagens.</li>
+      <li><a href="https://www.sanrio.com/collections/apparel" target="_blank" rel="noopener">Roupas fofas da Sanrio</a> — coleção oficial de roupas.</li>
+      <li><a href="https://www.sanrio.com.br/" target="_blank" rel="noopener">Onde procurar itens no Brasil</a> — Sanrio Brasil e informações sobre parceiros/licenciados.</li>
+      <li><a href="https://www.sanrio.com/pages/about-sanrio" target="_blank" rel="noopener">Como a Sanrio foi criada e por quem</a> — história e informações oficiais; fundador: Shintaro Tsuji.</li>
+      <li><a href="https://corporate.sanrio.co.jp/en/news/20260628_03.html" target="_blank" rel="noopener">Personagens mais votados</a> — resultados oficiais do ranking Sanrio Character Ranking 2026.</li>
+    </ol>
+    <p class="small">No item 3, em vez de declarar um único “melhor app”, a página aponta para a Sanrio Brasil e seus parceiros; assim você pode comparar as opções disponíveis.</p>
+  </section>
+
+  <section class="card">
+    <span class="tag">4 • Informações</span>
+    <h2>Informações dos links</h2>
+    <div class="info">
+      <div><strong>Personagens</strong> A página oficial reúne personagens como Hello Kitty, Kuromi, My Melody, Cinnamoroll e muitos outros.</div>
+      <div><strong>Roupas</strong> A loja oficial possui camisetas, moletons, vestidos, peças infantis e outras categorias de apparel.</div>
+      <div><strong>Brasil</strong> O site Sanrio Brasil apresenta personagens, conteúdo local e uma lista de parceiros/licenciados.</div>
+      <div><strong>História</strong> A Sanrio informa que foi fundada em 1960 e identifica Shintaro Tsuji como fundador.</div>
+      <div><strong>Popularidade</strong> No ranking oficial de 2026, Pompompurin ficou em 1º, Cinnamoroll em 2º, Pochacco em 3º, Kuromi em 4º e Hello Kitty em 5º.</div>
+      <div><strong>Compatibilidade</strong> O layout usa HTML/CSS responsivo e funciona em telas de computador e celular.</div>
+    </div>
+  </section>
+
+  <section class="card qr">
+    <span class="tag">5 • QR Code</span>
+    <h2>Escaneie pelo celular</h2>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAACFUlEQVR4nO1ay27DMAwjh/3/L3MHSnZySztsljblUDg1gUgC9bQpPHw+ngIHOchBDvJfID8BgF7LKzHeqMtOG40K2BMCAAIUQIYlqcvOaTm7IG1PcLETEJg8Ve4cl7ML8vP+SkhUmPReSnXRqBJSAiCKlI36q1//C8jg552KzMx03emiUQV7LiJSFEVQEMUrRbtoVMCeF3YSAAVF1XTZ6aLRWSQFgNt4jLCp7fWT39+In8t4YVLGf1ndn5azGZIAdwaKmlMkRBu3iJx9kIRce3pFgVRGgEJy9kBKbjJdzDt2htenx5eQszySQUEq05J/bFrETGTmIU+f3b+Drj6d4XdJnw18F40KIOWoKed0gSJozyc08fNVf88CdPn5ao0iAoy/P30u9fzFgtgLjb+/Vc8nVVdrFP1S5KXTcnZBphF3fs85nb1+N5xdNCrATyrdWnnKwcxESc82GpVAEpAYpqMQ82Q6ik6/+Ri5zjuUR0hcQzvILOX4+ztIrUmdK1FX+AiO1pGzC5J5pLnICSxrFpKzNDLm8wpnF7Hb9zwvnvz+an73Wsp5ZxZKa1xyXM4uyNv9EEadxIiem7TH5WyGJCNargm9IPnvmX9+C+my05caIK0cVU3Omsj7fRuPlTzzpJjO/2Nf/7NI+aYN3CN5mBzHm7ojz8pZHhkJHADyRkheqjNRZ173EnLR78jXBznIQQ6yL/ILrH/5lshJKlUAAAAASUVORK5CYII=" alt="QR Code para Sanrio Brasil">
+    <p>Escaneie este QR Code para abrir a <a href="https://www.sanrio.com.br/" target="_blank" rel="noopener">Sanrio Brasil</a>.</p>
+    <p class="small">Observação: como este arquivo HTML é local, o QR Code aponta para um endereço público da Sanrio. Se você publicar esta página em um site, o QR Code pode ser atualizado para apontar diretamente para a página publicada.</p>
+  </section>
+</main>
+
+<footer>
+  Links externos são abertos em nova aba. Conteúdo e marcas Sanrio pertencem aos respectivos titulares.
+</footer>
+</body>
+</html>
